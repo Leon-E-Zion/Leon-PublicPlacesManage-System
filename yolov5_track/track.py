@@ -13,6 +13,12 @@ import numpy as np
 from pathlib import Path
 import torch
 import torch.backends.cudnn as cudnn
+import sys
+if sys.platform == 'win32':
+    sys.path.append(r'D:\Leon-Coding')
+else:
+    sys.path.append(r'/home/leonzion/Leon_Coding/leon_FC')
+from Leon_FC import *
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # yolov5 strongsort root directory
@@ -136,7 +142,6 @@ def run(
         )
         strongsort_list[i].model.warmup()
     outputs = [None] * nr_sources
-
     # Run tracking
     model.warmup(imgsz=(1 if pt else nr_sources, 3, *imgsz))  # warmup
     dt, seen = [0.0, 0.0, 0.0, 0.0], 0

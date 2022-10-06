@@ -2893,7 +2893,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from PIL import ImageDraw, ImageFont
-
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 # from nets.yolo import YoloBody
 # from utils.utils import (cvtColor, get_classes, preprocess_input, resize_image,
 #                          show_config)
@@ -2987,7 +2987,7 @@ class YOLO(object):
         if not onnx:
             if self.cuda:
                 self.net = nn.DataParallel(self.net)
-                self.net = self.net.cuda()
+                self.net = self.net.to(device)
     #---------------------------------------------------#
     #   图像填充到指定形状
     #---------------------------------------------------#
@@ -3035,7 +3035,7 @@ class YOLO(object):
         with torch.no_grad():
             images = torch.from_numpy(image_data)
             if self.cuda:
-                images = images.cuda()
+                images = images.to(device)
             #---------------------------------------------------------#
             #   将图像输入网络当中进行预测！
             #---------------------------------------------------------#

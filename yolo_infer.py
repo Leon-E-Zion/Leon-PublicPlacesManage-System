@@ -9,21 +9,14 @@ Created on Sat Oct  1 13:22:46 2022
 from tools.yolo_leon import *
 from PIL import Image
 import datetime
-from norfair import Detection, Tracker
 from torchvision.ops import nms, roi_align, roi_pool
 import torch.nn.functional as F
 
 
 
-
-
-# 获取时间间隔|秒
-# starttime = datetime.datetime.now()
-# endtime = datetime.datetime.now()
-# print((endtime - starttime).seconds)
-
-# 图片推理
-yo = Yolo_infer()
-img = Image.open(r'/home/leonzion/图片/Test/mans_0.jpg')
-yolo_output = yo.infer(img)
-
+if 1>2 :
+    # 图片推理
+    yo = Yolo_infer()
+    img = Image.open(r'D:\Leon-Coding\Leon_TestData\mans_0.jpg')
+    yolo_output = yo.infer(img)
+    # print(yolo_output)
