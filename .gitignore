@@ -1,3 +1,4 @@
 
 yolov5_track/tar.mp4
 *.zip
+*.pth
