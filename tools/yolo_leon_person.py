@@ -9,7 +9,7 @@ import os
 
 import torch
 from tqdm import tqdm
-
+import copy
 import numpy as np
 from PIL import Image
 import glob
@@ -3013,6 +3013,7 @@ class YOLO(object):
     #   检测图片
     #---------------------------------------------------#
     def detect_image(self, image, crop = False, count = False):
+        img_orig = [copy.deepcopy(cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR))]
         #---------------------------------------------------#
         #   获得输入图片的高和宽
         #---------------------------------------------------#
@@ -3131,7 +3132,7 @@ class YOLO(object):
             draw.text(text_origin, str(label,'UTF-8'), fill=(0, 0, 0), font=font)
             del draw
 
-        return {'img':image , 'crop':crop_dict,'fea':fea,'outputs':boxes}
+        return {'img':image , 'crop':crop_dict,'fea':fea,'outputs':boxes,'img_orig':img_orig}
     
     def get_FPS(self, image, test_interval):
         image_shape = np.array(np.shape(image)[0:2])
@@ -3495,9 +3496,9 @@ def get_img():
 
 
 
-class Yolo_infer():
+class Yolo_infer_person():
     def __init__(self):
-        super(Yolo_infer, self).__init__()
+        super(Yolo_infer_person, self).__init__()
         self.yolo  = YOLO()
     
     def infer(self,img):

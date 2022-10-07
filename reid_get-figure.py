@@ -29,7 +29,6 @@ def get_fea(path):
     img = torch.unsqueeze(img, dim = 0)
     img = torch.tensor(img).to(torch.float32)
     net = torch.load('D:/Leon-Coding/Leon-PublicPlacesManage-System/models/reid-effi_b0.pth_net')
-    
     outputs = net(img) 
     # ---- L2-norm Feature ------
     ff = outputs.data.cpu()
@@ -37,7 +36,7 @@ def get_fea(path):
     ff = ff.div(fnorm.expand_as(ff))
     return ff
 
-if 2<1:
+if 1:
     ff = get_fea(r'D:\Leon-Coding\Leon_TestData\human_2.jpg')
     ff1 = get_fea(r'D:\Leon-Coding\Leon_TestData\human_0.jpg')
     print(F.cosine_similarity(ff1,ff,dim=1))

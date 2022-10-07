@@ -17,6 +17,18 @@ import os
 import scipy.io
 import yaml
 import math
+import sys
+if sys.platform == 'win32':
+    sys.path.append(r'D:\Leon-Coding\Leon_FC')
+else:
+    sys.path.append(r'/home/leonzion/Leon_Coding/Leon_FC')
+from leon_info import *
+from leon_os import *
+from leon_image import *
+
+
+leon_path_in('reid/Person_reID_baseline_pytorch-master')
+
 from model import ft_net, ft_net_dense, ft_net_hr, ft_net_swin, ft_net_swinv2, ft_net_efficient, ft_net_NAS, ft_net_convnext, PCB, PCB_test
 from utils import fuse_all_conv_bn
 #fp16
@@ -29,7 +41,7 @@ except ImportError: # will be 3.x series
 # --------
 
 parser = argparse.ArgumentParser(description='Test')
-parser.add_argument('--gpu_ids',default='0', type=str,help='gpu_ids: e.g. 0  0,1,2  0,2')
+parser.add_argument('--gpu_ids',default='-1', type=str,help='gpu_ids: e.g. 0  0,1,2  0,2')
 parser.add_argument('--which_epoch',default='last', type=str, help='0,1,2,3...or last')
 parser.add_argument('--test_dir',default='../Market/pytorch',type=str, help='./test_data')
 parser.add_argument('--name', default='ft_ResNet50', type=str, help='save model path')
@@ -47,7 +59,7 @@ parser.add_argument('--ms',default='1', type=str,help='multiple_scale: e.g. 1 1,
 opt = parser.parse_args()
 ###load config###
 # load the training config
-config_path = os.path.join('./model',opt.name,'opts.yaml')
+config_path = os.path.join('reid','Person_reID_baseline_pytorch-master','model',opt.name,'opts.yaml')
 with open(config_path, 'r') as stream:
         config = yaml.load(stream, Loader=yaml.FullLoader) # for the new pyyaml via 'conda install pyyaml'
 opt.fp16 = config['fp16'] 

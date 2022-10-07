@@ -1,0 +1,401 @@
+root:[D:\Leon-Coding\Leon-PublicPlacesManage-System]
++--.gitattributes
++--.gitignore
++--.ipynb_checkpoints
+| +--Untitled-checkpoint.ipynb
+| +--对接与实现-checkpoint.ipynb
++--.spyproject
+| +--config
+| | +--backups
+| | | +--codestyle.ini.bak
+| | | +--encoding.ini.bak
+| | | +--vcs.ini.bak
+| | | +--workspace.ini.bak
+| | +--codestyle.ini
+| | +--defaults
+| | | +--defaults-codestyle-0.2.0.ini
+| | | +--defaults-encoding-0.2.0.ini
+| | | +--defaults-vcs-0.2.0.ini
+| | | +--defaults-workspace-0.2.0.ini
+| | +--encoding.ini
+| | +--vcs.ini
+| | +--workspace.ini
++--file_tree.txt
++--get_tar.py
++--img_crop
++--jupyter
+| +--.ipynb_checkpoints
+| | +--Flask-Base-checkpoint.ipynb
+| | +--Flask-StreamData-Trans-checkpoint.ipynb
+| +--Flask-Base.ipynb
+| +--Flask-StreamData-Trans.ipynb
+| +--templates
+| | +--Flask-StreamData-Trans.html
++--Leon-file_tree.txt
++--main.py
++--models
+| +--passer_attribute.pth
+| +--readme.md
+| +--reid-effi_b0.pth
+| +--reid-effi_b0.pth_net
+| +--reid_orig.pth
+| +--yolo_leon.pth
++--passer-attribute_get
+| +--datafolder
+| | +--folder.py
+| | +--reid_dataset
+| | | +--cuhk03_to_image.py
+| | | +--gdrive_downloader.py
+| | | +--import_CUHK01.py
+| | | +--import_CUHK03.py
+| | | +--import_DukeMTMC.py
+| | | +--import_DukeMTMCAttribute.py
+| | | +--import_Market1501.py
+| | | +--import_Market1501Attribute.py
+| | | +--import_MarketDuke.py
+| | | +--import_MarketDuke_nodistractors.py
+| | | +--import_VIPeR.py
+| | | +--marketduke_to_hdf5.py
+| | | +--pytorch_prepare.py
+| | | +--reiddataset_downloader.py
+| | | +--__init__.py
+| +--doc
+| | +--attribute.json
+| | +--DukeMTMC-reID-attribute
+| | +--label.json
+| | +--Market1501-attribute
+| | +--save_json.py
+| +--inference.py
+| +--net
+| | +--models.py
+| | +--utils.py
+| | +--__init__.py
+| +--README.md
+| +--test.py
+| +--test_sample
+| | +--test_duke.jpg
+| | +--test_market.jpg
+| +--train.py
++--passer-attribute_get.py
++--reid
+| +--leon-test.py
+| +--Person_reID_baseline_pytorch-master
+| | +--.github
+| | | +--ISSUE_TEMPLATE
+| | | | +--bug_report.md
+| | | | +--feature_request.md
+| | +--.gitignore
+| | +--.travis.yml
+| | +--circle_loss.py
+| | +--colab
+| | | +--README.md
+| | +--demo.py
+| | +--dgfolder.py
+| | +--evaluate.py
+| | +--evaluate_gpu.py
+| | +--evaluate_rerank.py
+| | +--GPU-Re-Ranking
+| | | +--evaluate_rerank_gpu.py
+| | | +--extension
+| | | | +--adjacency_matrix
+| | | | | +--build_adjacency_matrix.cpp
+| | | | | +--build_adjacency_matrix_kernel.cu
+| | | | | +--setup.py
+| | | | +--make.sh
+| | | | +--propagation
+| | | | | +--gnn_propagate.cpp
+| | | | | +--gnn_propagate_kernel.cu
+| | | | | +--setup.py
+| | | +--gnn_reranking.py
+| | | +--README.md
+| | | +--utils.py
+| | +--instance_loss.py
+| | +--leaderboard
+| | | +--README.md
+| | +--leaderboard-IR
+| | | +--README.md
+| | +--leon_infer
+| | +--LICENSE
+| | +--model
+| | | +--.gitkeep
+| | | +--ft_ResNet50
+| | | | +--model.py
+| | | | +--net_19.pth_net
+| | | | +--opts.yaml
+| | | | +--train.jpg
+| | | | +--train.py
+| | +--model.py
+| | +--net_19.pth_net
+| | +--ODFA.py
+| | +--pdf
+| | | +--.gitkeep
+| | | +--3D-demo.png
+| | | +--CVPR19_compressed.pdf
+| | | +--ICCV17.pdf
+| | | +--TMM20_compressed.pdf
+| | +--prepare.py
+| | +--prepare_CUB.py
+| | +--prepare_MSMT.py
+| | +--prepare_static.py
+| | +--prepare_VehicleID.py
+| | +--prepare_VeRi.py
+| | +--prepare_viper.py
+| | +--random_erasing.py
+| | +--README.md
+| | +--requirements.txt
+| | +--re_ranking.py
+| | +--show.png
+| | +--sitemap.xml
+| | +--test.py
+| | +--test_with_TensorRT.py
+| | +--tmp.py
+| | +--tool
+| | | +--clear_model.py
+| | +--train.py
+| | +--tutorial
+| | | +--Answers_to_Quick_Questions.md
+| | | +--README.md
+| | +--utils.py
++--reid_get-figure.py
++--test.py
++--tools
+| +--cls.txt
+| +--fig_twice.py
+| +--leon_yolo.pth
+| +--simhei.ttf
+| +--Yolo.py
+| +--yolo_leon_person.py
++--Untitled.ipynb
++--yolov5_track
+| +--.github
+| | +--ISSUE_TEMPLATE
+| | | +--bug.yml
+| | | +--enhancement.yml
+| | | +--question.yml
+| | +--workflows
+| | | +--ci-testing.yml
+| | | +--stale.yml
+| +--.gitignore
+| +--.gitmodules
+| +--cd
+| +--conda
+| +--LICENSE
+| +--README.md
+| +--reid_export.py
+| +--requirements.txt
+| +--runs
+| | +--track
+| | | +--exp
+| | | +--exp10
+| | | +--exp11
+| | | +--exp12
+| | | +--exp13
+| | | +--exp14
+| | | +--exp2
+| | | +--exp3
+| | | +--exp4
+| | | +--exp5
+| | | +--exp6
+| | | +--exp7
+| | | +--exp8
+| | | +--exp9
+| +--source
+| +--strong_sort
+| | +--.gitignore
+| | +--configs
+| | | +--strong_sort.yaml
+| | +--deep
+| | | +--checkpoint
+| | | | +--.gitkeep
+| | | | +--osnet_x0_25_market1501.pth
+| | | | +--osnet_x0_25_msmt17.pth
+| | | | +--osnet_x1_0_msmt17.pth
+| | | +--reid
+| | | +--reid_model_factory.py
+| | | +--__init__.py
+| | +--reid_multibackend.py
+| | +--results
+| | | +--output_04.gif
+| | | +--output_th025.gif
+| | | +--track_all_1280_025conf.gif
+| | | +--track_pedestrians_1280_05conf.gif
+| | +--sort
+| | | +--detection.py
+| | | +--iou_matching.py
+| | | +--kalman_filter.py
+| | | +--linear_assignment.py
+| | | +--nn_matching.py
+| | | +--preprocessing.py
+| | | +--track.py
+| | | +--tracker.py
+| | | +--__init__.py
+| | +--strong_sort.py
+| | +--utils
+| | | +--asserts.py
+| | | +--draw.py
+| | | +--evaluation.py
+| | | +--io.py
+| | | +--json_logger.py
+| | | +--log.py
+| | | +--parser.py
+| | | +--tools.py
+| | | +--__init__.py
+| | +--__init__.py
+| +--tar.mp4
+| +--track.py
+| +--val.py
+| +--yolov5
+| | +--.dockerignore
+| | +--.gitattributes
+| | +--.github
+| | | +--CODE_OF_CONDUCT.md
+| | | +--dependabot.yml
+| | | +--ISSUE_TEMPLATE
+| | | | +--bug-report.yml
+| | | | +--config.yml
+| | | | +--feature-request.yml
+| | | | +--question.yml
+| | | +--PULL_REQUEST_TEMPLATE.md
+| | | +--README_cn.md
+| | | +--SECURITY.md
+| | | +--workflows
+| | | | +--ci-testing.yml
+| | | | +--codeql-analysis.yml
+| | | | +--docker.yml
+| | | | +--greetings.yml
+| | | | +--rebase.yml
+| | | | +--stale.yml
+| | +--.gitignore
+| | +--.pre-commit-config.yaml
+| | +--classify
+| | | +--predict.py
+| | | +--train.py
+| | | +--val.py
+| | +--CONTRIBUTING.md
+| | +--data
+| | | +--Argoverse.yaml
+| | | +--coco.yaml
+| | | +--coco128.yaml
+| | | +--GlobalWheat2020.yaml
+| | | +--hyps
+| | | | +--hyp.Objects365.yaml
+| | | | +--hyp.scratch-high.yaml
+| | | | +--hyp.scratch-low.yaml
+| | | | +--hyp.scratch-med.yaml
+| | | | +--hyp.VOC.yaml
+| | | +--ImageNet.yaml
+| | | +--images
+| | | | +--bus.jpg
+| | | | +--zidane.jpg
+| | | +--Objects365.yaml
+| | | +--scripts
+| | | | +--download_weights.sh
+| | | | +--get_coco.sh
+| | | | +--get_coco128.sh
+| | | | +--get_imagenet.sh
+| | | +--SKU-110K.yaml
+| | | +--VisDrone.yaml
+| | | +--VOC.yaml
+| | | +--xView.yaml
+| | +--detect.py
+| | +--export.py
+| | +--hubconf.py
+| | +--LICENSE
+| | +--models
+| | | +--common.py
+| | | +--experimental.py
+| | | +--hub
+| | | | +--anchors.yaml
+| | | | +--yolov3-spp.yaml
+| | | | +--yolov3-tiny.yaml
+| | | | +--yolov3.yaml
+| | | | +--yolov5-bifpn.yaml
+| | | | +--yolov5-fpn.yaml
+| | | | +--yolov5-p2.yaml
+| | | | +--yolov5-p34.yaml
+| | | | +--yolov5-p6.yaml
+| | | | +--yolov5-p7.yaml
+| | | | +--yolov5-panet.yaml
+| | | | +--yolov5l6.yaml
+| | | | +--yolov5m6.yaml
+| | | | +--yolov5n6.yaml
+| | | | +--yolov5s-ghost.yaml
+| | | | +--yolov5s-transformer.yaml
+| | | | +--yolov5s6.yaml
+| | | | +--yolov5x6.yaml
+| | | +--tf.py
+| | | +--yolo.py
+| | | +--yolov5l.yaml
+| | | +--yolov5m.yaml
+| | | +--yolov5n.yaml
+| | | +--yolov5s.yaml
+| | | +--yolov5x.yaml
+| | | +--__init__.py
+| | +--README.md
+| | +--requirements.txt
+| | +--setup.cfg
+| | +--tmp.py
+| | +--train.py
+| | +--tutorial.ipynb
+| | +--utils
+| | | +--activations.py
+| | | +--augmentations.py
+| | | +--autoanchor.py
+| | | +--autobatch.py
+| | | +--aws
+| | | | +--mime.sh
+| | | | +--resume.py
+| | | | +--userdata.sh
+| | | | +--__init__.py
+| | | +--benchmarks.py
+| | | +--callbacks.py
+| | | +--dataloaders.py
+| | | +--docker
+| | | | +--Dockerfile
+| | | | +--Dockerfile-arm64
+| | | | +--Dockerfile-cpu
+| | | +--downloads.py
+| | | +--flask_rest_api
+| | | | +--example_request.py
+| | | | +--README.md
+| | | | +--restapi.py
+| | | +--general.py
+| | | +--google_app_engine
+| | | | +--additional_requirements.txt
+| | | | +--app.yaml
+| | | | +--Dockerfile
+| | | +--loggers
+| | | | +--clearml
+| | | | | +--clearml_utils.py
+| | | | | +--hpo.py
+| | | | | +--README.md
+| | | | | +--__init__.py
+| | | | +--wandb
+| | | | | +--log_dataset.py
+| | | | | +--README.md
+| | | | | +--sweep.py
+| | | | | +--sweep.yaml
+| | | | | +--wandb_utils.py
+| | | | | +--__init__.py
+| | | | +--__init__.py
+| | | +--loss.py
+| | | +--metrics.py
+| | | +--plots.py
+| | | +--torch_utils.py
+| | | +--__init__.py
+| | +--val.py
+| | +--weights
+| | | +--crowdhuman_yolov5m.pt
++--yolo_infer.py
++--yolo_infer_person.py
++--zip
+| +--facenet-retinaface-pytorch-main.zip
+| +--Person-Attribute-Recognition-MarketDuke-master.zip
+| +--Person_reID_baseline_pytorch-master.zip
+| +--Yolov5_StrongSORT_OSNet-master.zip
++--后端接口思路.pdf
++--对接与实现.ipynb
++--项目复现.md
++--项目实现.md
++--项目结构.md
++--项目规划.md

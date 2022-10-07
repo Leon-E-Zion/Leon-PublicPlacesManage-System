@@ -6,9 +6,16 @@ from torch.autograd import Variable
 # import pretrainedmodels
 import timm
 from utils import load_state_dict_mute
+
 import sys
-sys.path.append('/home/leonzion/Leon_Coding/leon_fc')
-from info import *
+if sys.platform == 'win32':
+    sys.path.append(r'D:\Leon-Coding\Leon_FC')
+else:
+    sys.path.append(r'/home/leonzion/Leon_Coding/Leon_FC')
+from leon_info import *
+from leon_os import *
+from leon_image import *
+
 ######################################################################
 def weights_init_kaiming(m):
     classname = m.__class__.__name__
