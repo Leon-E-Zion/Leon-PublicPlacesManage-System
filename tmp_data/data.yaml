@@ -1,0 +1,9 @@
+attri: 'True'
+camera_id: '1'
+fall_detect: 'False'
+key: value
+mask_detect: 'False'
+opt_id: '[1,2,3,4]'
+reid: 'True'
+smoke_detect: 'False'
+tar_person: '2'
