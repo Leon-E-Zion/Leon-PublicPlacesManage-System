@@ -7,14 +7,10 @@ from torch.autograd import Variable
 import timm
 from utils import load_state_dict_mute
 
-import sys
-if sys.platform == 'win32':
-    sys.path.append(r'D:\Leon-Coding\Leon_FC')
-else:
-    sys.path.append(r'/home/leonzion/Leon_Coding/Leon_FC')
-from leon_info import *
-from leon_os import *
-from leon_image import *
+
+from Leon_FC.leon_info import *
+from Leon_FC.leon_os import *
+from Leon_FC.leon_image import *
 
 ######################################################################
 def weights_init_kaiming(m):
